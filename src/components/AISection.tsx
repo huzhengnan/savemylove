@@ -24,7 +24,7 @@ const AISection: React.FC = () => {
         {/* 右侧功能介绍 */}
         <div className="flex-1 min-w-[280px] max-w-xl space-y-6">
           <h3 className="text-2xl font-bold text-gray-900">{t('commSkills')}</h3>
-          <p className="text-gray-600">
+          <p className="mt-4 text-gray-600">
             {t('commDesc')}
           </p>
           <div className="space-y-4">
@@ -44,12 +44,14 @@ const AISection: React.FC = () => {
               description={t('personalizedDesc')}
             />
           </div>
-          <button
-            className="mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all"
-            onClick={() => navigate('/ai-chat')}
-          >
-            {t('startTraining')}
-          </button>
+          <div className="flex justify-end">
+            <button
+              className="mt-6 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all"
+              onClick={() => navigate('/ai-chat')}
+            >
+              {t('startTraining')}
+            </button>
+          </div>
         </div>
       </div>
     </section>
