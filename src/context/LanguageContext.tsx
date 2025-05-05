@@ -598,6 +598,44 @@ const translations: Record<string, Record<Language, string>> = {
     zh: "如果您对本服务条款有任何疑问，请通过以下方式联系我们：contact@savemy.love", 
     en: "If you have any questions about these Terms of Service, please contact us at: contact@savemy.love" 
   },
+  // SEO
+  "siteTitle": { 
+    zh: "SaveMyLove - 爱情测算与情感咨询平台", 
+    en: "SaveMyLove - Love Calculator and Emotional Consultation Platform" 
+  },
+  "siteDescription": { 
+    zh: "SaveMyLove 提供专业的爱情测算、姓名配对和情感咨询服务，帮助您找到真爱，解决情感问题。", 
+    en: "SaveMyLove provides professional love calculation, name compatibility, and emotional consultation services to help you find true love and solve emotional problems." 
+  },
+  "siteKeywords": { 
+    zh: "爱情测算,姓名配对,情感咨询,AI对话,情感治愈,爱情测试,缘分测试", 
+    en: "love calculator, name compatibility, emotional consultation, AI chat, emotional healing, love test, fate test" 
+  },
+  // Page specific SEO
+  "loveCalculatorTitle": { 
+    zh: "爱情测算 - SaveMyLove", 
+    en: "Love Calculator - SaveMyLove" 
+  },
+  "loveCalculatorDescription": { 
+    zh: "使用我们的爱情测算工具，输入双方信息，获取专业的爱情匹配度分析报告。", 
+    en: "Use our love calculator tool, enter information for both parties, and get a professional love compatibility analysis report." 
+  },
+  "nameCompatibilityTitle": { 
+    zh: "姓名配对 - SaveMyLove", 
+    en: "Name Compatibility - SaveMyLove" 
+  },
+  "emotionalHealingTitle": { 
+    zh: "情感治愈 - SaveMyLove", 
+    en: "Emotional Healing - SaveMyLove" 
+  },
+  "emotionalHealingDescription": { 
+    zh: "专业的情感治愈服务，帮助您走出情感困境，重获幸福。", 
+    en: "Professional emotional healing services to help you overcome emotional difficulties and regain happiness." 
+  },
+  "aiChatDescription": { 
+    zh: "与我们的 AI 情感助手对话，获得专业的情感建议和支持。", 
+    en: "Chat with our AI emotional assistant to get professional emotional advice and support." 
+  },
 };
 
 export const LanguageProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {

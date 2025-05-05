@@ -42,9 +42,11 @@
 │   │   ├── EmotionalHealth.tsx
 │   │   ├── LoveCalculator.tsx
 │   │   ├── NameCompatibility.tsx
+│   │   ├── PrivacyPolicy.tsx
 │   │   ├── PursuitStrategy.tsx
 │   │   ├── ReconciliationAssessment.tsx
 │   │   ├── RelationshipAnxiety.tsx
+│   │   ├── TermsOfService.tsx
 │   │   ├── UnrequitedLove.tsx
 │   │   ├── ZodiacMatch.tsx
 │   ├── scripts/               # 脚本工具目录
@@ -56,4 +58,5 @@
 ├── tsconfig.app.json
 ├── tsconfig.json         # TypeScript 配置
 ├── tsconfig.node.json
+├── vercel.json
 ├── vite.config.ts
