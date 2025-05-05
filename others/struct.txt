@@ -1,0 +1,59 @@
+# AI 图像生成网站项目结构
+
+## 目录结构
+
+├── .env                  # 环境变量文件
+├── .env.prod             # 生产环境变量
+├── .gitignore            # Git 忽略文件配置
+├── eslint.config.js
+├── favicon.ico
+├── index.html
+├── others/               # 
+│   ├── next-step.txt         # 项目任务清单
+│   ├── struct.txt            # 项目结构概览
+│   ├── website.prompt
+├── package-lock.json
+├── package.json          # 项目依赖和脚本
+├── postcss.config.js
+├── README.md             # 项目说明文档
+├── src/               # 源代码目录
+│   ├── App.tsx
+│   ├── components/               # 组件目录
+│   │   ├── AIChat.tsx
+│   │   ├── AISection.tsx
+│   │   ├── ConsultationAreas.tsx
+│   │   ├── FeaturedTools.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── LanguageSwitcher.tsx
+│   │   ├── StreamMarkdown.tsx
+│   ├── config/               # 
+│   │   ├── prompts.ts
+│   ├── context/               # 
+│   │   ├── LanguageContext.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── pages/               # 
+│   │   ├── AIChatPage.tsx
+│   │   ├── BreakupRecovery.tsx
+│   │   ├── ChatAnalysis.tsx
+│   │   ├── EmotionalHealing.tsx
+│   │   ├── EmotionalHealth.tsx
+│   │   ├── LoveCalculator.tsx
+│   │   ├── NameCompatibility.tsx
+│   │   ├── PursuitStrategy.tsx
+│   │   ├── ReconciliationAssessment.tsx
+│   │   ├── RelationshipAnxiety.tsx
+│   │   ├── UnrequitedLove.tsx
+│   │   ├── ZodiacMatch.tsx
+│   ├── scripts/               # 脚本工具目录
+│   │   ├── generate-struct.ts    # 项目结构生成脚本
+│   ├── service/               # 
+│   │   ├── openrouterService.ts
+│   ├── vite-env.d.ts
+├── tailwind.config.js    # Tailwind CSS 配置
+├── tsconfig.app.json
+├── tsconfig.json         # TypeScript 配置
+├── tsconfig.node.json
+├── vite.config.ts
