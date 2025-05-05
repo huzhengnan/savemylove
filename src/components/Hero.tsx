@@ -69,13 +69,13 @@ const Hero: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               
-              <a 
+              {/* <a 
                 href="#contact" 
                 className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 shadow-sm transition-all"
               >
                 {t('consultExpert')}
                 <MessageCircleHeart className="ml-2 h-5 w-5 text-pink-500" />
-              </a>
+              </a> */}
             </div>
           </div>
           
