@@ -4,15 +4,15 @@ import { useLanguage } from '../context/LanguageContext';
 
 const testimonials = [
   {
-    name: '胡先生',
-    age: 35,
+    name: 'H先生',
+    age: 5,
     status: '2025年5月1日',
     content: '通过SaveMyLove的分析，我才明白我们沟通中的问题所在。经过三天的AI对话练习和策略执行，学会了放手！',
     rating: 5
   },
   {
-    name: '曾女士',
-    age: 30,
+    name: 'Z女士',
+    age: 3,
     status: '2025年5月1日',
     content: '没用SaveMyLove的分析，离开了错的人，找到了真爱',
     rating: 5
