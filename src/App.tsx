@@ -22,7 +22,7 @@ import EmotionalHealing from './pages/EmotionalHealing';
 import AIChatPage from './pages/AIChatPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
-import { Helmet } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // 包装组件以使用hooks
 const AppContent: React.FC = () => {
@@ -114,11 +114,13 @@ const AppContent: React.FC = () => {
 
 function App() {
   return (
-    <LanguageProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </LanguageProvider>
+    <HelmetProvider>
+      <LanguageProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </LanguageProvider>
+    </HelmetProvider>
   );
 }
 
