@@ -17,22 +17,22 @@ const AreaCard: React.FC<AreaCardProps> = ({ icon, title, description, bgColor, 
   
   return (
     <Link to={to} className="block">
-      <div className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all ${bgColor} p-8`}>
-        {/* Decorative pattern */}
-        <div className="absolute -right-16 -top-16 w-32 h-32 bg-white opacity-5 rounded-full"></div>
-        <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-white opacity-5 rounded-full"></div>
-        
-        <div className={`w-14 h-14 rounded-full ${iconBgColor} flex items-center justify-center text-white mb-6`}>
-          {icon}
-        </div>
-        
-        <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
-        <p className="text-white/90 mb-6">{description}</p>
-        
-        <button className="px-4 py-2 bg-white text-sm font-medium rounded-md shadow-sm hover:shadow transition-all group-hover:translate-y-0 transform translate-y-1">
-          {t('learnMore')}
-        </button>
+    <div className={`relative group overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-all ${bgColor} p-8`}>
+      {/* Decorative pattern */}
+      <div className="absolute -right-16 -top-16 w-32 h-32 bg-white opacity-5 rounded-full"></div>
+      <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-white opacity-5 rounded-full"></div>
+      
+      <div className={`w-14 h-14 rounded-full ${iconBgColor} flex items-center justify-center text-white mb-6`}>
+        {icon}
       </div>
+      
+      <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
+      <p className="text-white/90 mb-6">{description}</p>
+      
+      <button className="px-4 py-2 bg-white text-sm font-medium rounded-md shadow-sm hover:shadow transition-all group-hover:translate-y-0 transform translate-y-1">
+        {t('learnMore')}
+      </button>
+    </div>
     </Link>
   );
 };

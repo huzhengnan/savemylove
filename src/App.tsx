@@ -42,17 +42,17 @@ const AppContent: React.FC = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white text-gray-800 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Header />
-        <main>
+      <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white text-gray-800 font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Header />
+          <main>
           <Routes>
             <Route path="/" element={
               <>
-                <Hero />
-                <FeaturedTools />
-                <ConsultationAreas />
-                <AISection />
+            <Hero />
+            <FeaturedTools />
+            <ConsultationAreas />
+            <AISection />
               </>
             } />
             <Route path="/love-calculator" element={<LoveCalculator />} />
@@ -68,10 +68,10 @@ const AppContent: React.FC = () => {
             <Route path="/emotional-healing" element={<EmotionalHealing />} />
             <Route path="/ai-chat" element={<AIChatPage />} />
           </Routes>
-        </main>
-        <Footer />
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
   );
 };
 

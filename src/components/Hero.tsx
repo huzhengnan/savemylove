@@ -94,37 +94,72 @@ const Hero: React.FC = () => {
                 <Heart className="h-5 w-5 text-purple-300" fill="#DDD6FE" />
               </div>
               
-              {/* Customer testimonial */}
-              <div 
-                className={`relative bg-white/80 backdrop-blur-sm rounded-xl p-6 max-w-sm mx-auto mt-20 shadow-lg border border-pink-100 transition-all duration-300 transform ${
-                  isTransitioning 
-                    ? 'opacity-0 translate-y-4' 
-                    : 'opacity-100 translate-y-0'
-                }`}
-              >
-                <div className="flex items-center mb-4">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 flex items-center justify-center text-white font-bold">
-                    {testimonials[currentTestimonial].name.charAt(0)}
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-sm font-medium text-gray-900">
-                      {testimonials[currentTestimonial].name}，{testimonials[currentTestimonial].age}岁
-                    </h3>
-                    <p className="text-xs text-gray-500">{testimonials[currentTestimonial].status}</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 text-sm">
-                  "{testimonials[currentTestimonial].content}"
-                </p>
-                <div className="mt-4 flex">
-                  {Array(testimonials[currentTestimonial].rating).fill(0).map((_, index) => (
-                    <Heart 
-                      key={index} 
-                      className="h-4 w-4 text-pink-500 mr-1" 
-                      fill="#EC4899"
-                    />
-                  ))}
-                </div>
+              {/* Stacked testimonials */}
+              <div className="relative h-full">
+                {testimonials.map((testimonial, index) => {
+                  const isActive = index === currentTestimonial;
+                  const isNext = index === (currentTestimonial + 1) % testimonials.length;
+                  const isPrev = index === (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+                  
+                  // 为每张卡片生成随机旋转角度
+                  const rotation = index * 3 - 3; // 每张卡片相差3度
+                  const randomOffset = Math.random() * 20 - 10; // -10到10之间的随机偏移
+                  
+                  return (
+                    <div
+                      key={index}
+                      className={`absolute w-full max-w-sm mx-auto transition-all duration-500 ${
+                        isActive
+                          ? 'opacity-100 z-20'
+                          : isNext
+                          ? 'opacity-80 z-10'
+                          : isPrev
+                          ? 'opacity-80 z-10'
+                          : 'opacity-60 z-0'
+                      }`}
+                      style={{
+                        top: '50%',
+                        left: '50%',
+                        transform: `translate(-50%, -50%) ${
+                          isActive 
+                            ? 'scale(1) translateY(0) rotate(0deg)' 
+                            : isNext 
+                            ? `scale(0.95) translateY(20px) rotate(${rotation + randomOffset}deg)` 
+                            : isPrev 
+                            ? `scale(0.95) translateY(-20px) rotate(${rotation + randomOffset}deg)` 
+                            : `scale(0.9) translateY(40px) rotate(${rotation + randomOffset}deg)`
+                        }`,
+                        filter: isActive ? 'none' : 'blur(1px)',
+                      }}
+                    >
+                      <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-pink-100">
+                        <div className="flex items-center mb-4">
+                          <div className="h-10 w-10 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 flex items-center justify-center text-white font-bold">
+                            {testimonial.name.charAt(0)}
+                          </div>
+                          <div className="ml-3">
+                            <h3 className="text-sm font-medium text-gray-900">
+                              {testimonial.name}，{testimonial.age}岁
+                            </h3>
+                            <p className="text-xs text-gray-500">{testimonial.status}</p>
+                          </div>
+                        </div>
+                        <p className="text-gray-700 text-sm">
+                          "{testimonial.content}"
+                        </p>
+                        <div className="mt-4 flex">
+                          {Array(testimonial.rating).fill(0).map((_, i) => (
+                            <Heart 
+                              key={i} 
+                              className="h-4 w-4 text-pink-500 mr-1" 
+                              fill="#EC4899"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             </li>
             <li className="flex items-center">
               <Phone className="h-5 w-5 text-pink-500 mr-3" />
-              <span className="text-gray-600">+86 131 2345 6789</span>
+              <span className="text-gray-600">+86 13148474898</span>
             </li>
             <li className="flex items-start">
               <MapPin className="h-5 w-5 text-pink-500 mr-3 mt-1" />
