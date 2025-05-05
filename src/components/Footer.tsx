@@ -2,9 +2,22 @@ import React from 'react';
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (anchor: string) => {
+    if (window.location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: anchor } });
+    } else {
+      const el = document.getElementById(anchor);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
   
   return (
     <footer id="contact" className="pt-16 pb-8 border-t border-gray-100">
@@ -30,20 +43,20 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">{t('loveCal')}</h3>
           <ul className="space-y-2">
-            <FooterLink href="#tools">{t('nameComp')}</FooterLink>
-            <FooterLink href="#tools">{t('zodiacMatch')}</FooterLink>
-            <FooterLink href="#tools">{t('affIndex')}</FooterLink>
-            <FooterLink href="#tools">{t('pursuitStrat')}</FooterLink>
+            <FooterLink to="/name-compatibility">{t('nameComp')}</FooterLink>
+            <FooterLink to="/zodiac-match">{t('zodiacMatch')}</FooterLink>
+            <FooterLink to="/love-calculator">{t('affIndex')}</FooterLink>
+            <FooterLink to="/pursuit-strategy">{t('pursuitStrat')}</FooterLink>
           </ul>
         </div>
         
         <div>
           <h3 className="text-lg font-semibold mb-4">{t('emotConsult')}</h3>
           <ul className="space-y-2">
-            <FooterLink href="#areas">{t('unrequitedLove')}</FooterLink>
-            <FooterLink href="#areas">{t('insecurity')}</FooterLink>
-            <FooterLink href="#areas">{t('reconciliation')}</FooterLink>
-            <FooterLink href="#areas">{t('emotRepair')}</FooterLink>
+            <FooterLink to="/unrequited-love">{t('unrequitedLove')}</FooterLink>
+            <FooterLink to="/relationship-anxiety">{t('insecurity')}</FooterLink>
+            <FooterLink to="/reconciliation-assessment">{t('reconciliation')}</FooterLink>
+            <FooterLink to="/emotional-healing">{t('emotRepair')}</FooterLink>
           </ul>
         </div>
         
@@ -90,8 +103,8 @@ const Footer: React.FC = () => {
       <div className="text-center text-gray-500 text-sm">
         <p className="mb-2">{t('copyright')}</p>
         <div className="flex justify-center space-x-4">
-          <a href="#" className="hover:text-pink-500 transition-colors">{t('privacy')}</a>
-          <a href="#" className="hover:text-pink-500 transition-colors">{t('terms')}</a>
+          <Link to="/privacy" className="hover:text-pink-500 transition-colors">{t('privacy')}</Link>
+          <Link to="/terms" className="hover:text-pink-500 transition-colors">{t('terms')}</Link>
         </div>
       </div>
     </footer>
@@ -115,19 +128,19 @@ const SocialLink: React.FC<SocialLinkProps> = ({ icon, href }) => {
 };
 
 interface FooterLinkProps {
-  href: string;
+  to: string;
   children: React.ReactNode;
 }
 
-const FooterLink: React.FC<FooterLinkProps> = ({ href, children }) => {
+const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
   return (
     <li>
-      <a 
-        href={href}
+      <Link 
+        to={to}
         className="text-gray-600 hover:text-pink-500 transition-colors"
       >
         {children}
-      </a>
+      </Link>
     </li>
   );
 };

@@ -507,6 +507,97 @@ const translations: Record<string, Record<Language, string>> = {
   you: { zh: "你", en: "You" },
   openNewChat: { zh: "在新窗口中打开聊天", en: "Open chat in new window" },
   back: { zh: "返回", en: "Back" },
+  // Privacy Policy
+  "privacyPolicy": { zh: "隐私政策", en: "Privacy Policy" },
+  "privacyPolicyIntro": { 
+    zh: "SaveMyLove 非常重视您的隐私。本隐私政策说明了我们如何收集、使用和保护您的个人信息。", 
+    en: "SaveMyLove takes your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information." 
+  },
+  "informationCollection": { zh: "信息收集", en: "Information Collection" },
+  "informationCollectionDesc": { 
+    zh: "我们收集的信息包括但不限于：姓名、年龄、联系方式、情感状态等。这些信息仅用于提供更好的服务。", 
+    en: "The information we collect includes but is not limited to: name, age, contact information, emotional status, etc. This information is used solely to provide better services." 
+  },
+  "informationUsage": { zh: "信息使用", en: "Information Usage" },
+  "informationUsageDesc": { 
+    zh: "我们使用收集的信息来提供个性化服务、改善用户体验、进行数据分析，以及发送重要通知。", 
+    en: "We use the collected information to provide personalized services, improve user experience, conduct data analysis, and send important notifications." 
+  },
+  "dataSecurity": { zh: "数据安全", en: "Data Security" },
+  "dataSecurityDesc": { 
+    zh: "我们采用行业标准的安全措施来保护您的个人信息，包括加密传输、安全存储和访问控制。", 
+    en: "We employ industry-standard security measures to protect your personal information, including encrypted transmission, secure storage, and access control." 
+  },
+  "cookies": { zh: "Cookie 使用", en: "Cookies" },
+  "cookiesDesc": { 
+    zh: "我们使用 Cookie 来改善网站功能、分析使用情况并提供个性化体验。您可以通过浏览器设置管理 Cookie。", 
+    en: "We use cookies to improve website functionality, analyze usage, and provide personalized experiences. You can manage cookies through your browser settings." 
+  },
+  "thirdParty": { zh: "第三方服务", en: "Third-Party Services" },
+  "thirdPartyDesc": { 
+    zh: "我们可能与第三方服务提供商合作，这些提供商有各自的隐私政策。我们建议您查看他们的政策。", 
+    en: "We may work with third-party service providers who have their own privacy policies. We recommend reviewing their policies." 
+  },
+  "userRights": { zh: "用户权利", en: "User Rights" },
+  "userRightsDesc": { 
+    zh: "您有权访问、更正或删除您的个人信息。如需行使这些权利，请联系我们的客服。", 
+    en: "You have the right to access, correct, or delete your personal information. To exercise these rights, please contact our customer service." 
+  },
+  "policyUpdates": { zh: "政策更新", en: "Policy Updates" },
+  "policyUpdatesDesc": { 
+    zh: "我们可能会不时更新本隐私政策。更新后的政策将在网站上公布，并注明生效日期。", 
+    en: "We may update this Privacy Policy from time to time. Updated policies will be posted on the website with the effective date." 
+  },
+  "privacyContactDesc": { 
+    zh: "如果您对本隐私政策有任何疑问，请通过以下方式联系我们：contact@savemy.love", 
+    en: "If you have any questions about this Privacy Policy, please contact us at: contact@savemy.love" 
+  },
+
+  // Terms of Service
+  "termsOfService": { zh: "服务条款", en: "Terms of Service" },
+  "termsIntro": { 
+    zh: "欢迎使用 SaveMyLove 服务。使用我们的服务即表示您同意遵守以下条款和条件。", 
+    en: "Welcome to SaveMyLove. By using our services, you agree to comply with the following terms and conditions." 
+  },
+  "serviceDescription": { zh: "服务说明", en: "Service Description" },
+  "serviceDescriptionDesc": { 
+    zh: "SaveMyLove 提供情感咨询、爱情测算和 AI 对话服务。我们的服务仅供个人使用，不得用于商业目的。", 
+    en: "SaveMyLove provides emotional consultation, love calculation, and AI chat services. Our services are for personal use only and not for commercial purposes." 
+  },
+  "userObligations": { zh: "用户义务", en: "User Obligations" },
+  "userObligationsDesc": { 
+    zh: "用户应提供真实、准确的信息，不得从事任何违法或损害他人利益的行为。", 
+    en: "Users should provide truthful and accurate information and must not engage in any illegal or harmful activities." 
+  },
+  "intellectualProperty": { zh: "知识产权", en: "Intellectual Property" },
+  "intellectualPropertyDesc": { 
+    zh: "网站上的所有内容，包括但不限于文字、图片、设计等，均受知识产权法保护。", 
+    en: "All content on the website, including but not limited to text, images, and designs, is protected by intellectual property laws." 
+  },
+  "limitationOfLiability": { zh: "责任限制", en: "Limitation of Liability" },
+  "limitationOfLiabilityDesc": { 
+    zh: "我们对因使用服务而产生的任何直接或间接损失不承担责任。", 
+    en: "We are not liable for any direct or indirect losses resulting from the use of our services." 
+  },
+  "termination": { zh: "服务终止", en: "Termination" },
+  "terminationDesc": { 
+    zh: "我们保留随时终止或暂停服务的权利，恕不另行通知。", 
+    en: "We reserve the right to terminate or suspend services at any time without prior notice." 
+  },
+  "governingLaw": { zh: "适用法律", en: "Governing Law" },
+  "governingLawDesc": { 
+    zh: "本条款受中华人民共和国法律管辖。", 
+    en: "These terms are governed by the laws of the People's Republic of China." 
+  },
+  "changesToTerms": { zh: "条款变更", en: "Changes to Terms" },
+  "changesToTermsDesc": { 
+    zh: "我们保留随时修改本条款的权利。修改后的条款将在网站上公布。", 
+    en: "We reserve the right to modify these terms at any time. Modified terms will be posted on the website." 
+  },
+  "termsContactDesc": { 
+    zh: "如果您对本服务条款有任何疑问，请通过以下方式联系我们：contact@savemy.love", 
+    en: "If you have any questions about these Terms of Service, please contact us at: contact@savemy.love" 
+  },
 };
 
 export const LanguageProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {

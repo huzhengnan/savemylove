@@ -20,6 +20,8 @@ import RelationshipAnxiety from './pages/RelationshipAnxiety';
 import BreakupRecovery from './pages/BreakupRecovery';
 import EmotionalHealing from './pages/EmotionalHealing';
 import AIChatPage from './pages/AIChatPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 // 包装组件以使用hooks
 const AppContent: React.FC = () => {
@@ -67,6 +69,8 @@ const AppContent: React.FC = () => {
             <Route path="/breakup-recovery" element={<BreakupRecovery />} />
             <Route path="/emotional-healing" element={<EmotionalHealing />} />
             <Route path="/ai-chat" element={<AIChatPage />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
           </Routes>
           </main>
           <Footer />
