@@ -462,6 +462,10 @@ const translations: Record<string, Record<Language, string>> = {
     zh: "情感修复", 
     en: "Emotional Healing" 
   },
+  "emotionalHealingAnalysis": {
+    zh: "情感修复分析",
+    en: "Emotional Healing Analysis"
+  },
   "emotionalHealingDesc": { 
     zh: "帮助你修复情感创伤，重建健康的亲密关系", 
     en: "Help you heal emotional wounds and rebuild healthy intimate relationships" 
