@@ -119,7 +119,7 @@ function App() {
         <Router>
           <AppContent />
         </Router>
-      </LanguageProvider>
+    </LanguageProvider>
     </HelmetProvider>
   );
 }

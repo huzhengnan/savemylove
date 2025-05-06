@@ -21,7 +21,7 @@ const translations: Record<string, Record<Language, string>> = {
   // Hero
   "heroTitle1": { zh: "爱情的问题，", en: "Love problems," },
   "heroTitle2": { zh: "我们来解决。", en: "we solve them." },
-  "heroQuote": { zh: "自古深情留不住，总是套路得人心", en: "True love rarely stays, it's strategy that wins hearts" },
+  "heroQuote": { zh: "莫让爱生尘", en: "Don't let love gather dust" },
   "heroDesc": { zh: "SaveMyLove 通过专业分析和AI技术，帮助你在情感困境中找到方向，获得专业指导和温暖陪伴。", en: "SaveMyLove helps you find direction in emotional difficulties through professional analysis and AI technology, providing expert guidance and warm companionship." },
   "startAnalysis": { zh: "开始分析", en: "Start Analysis" },
   "consultExpert": { zh: "咨询专家", en: "Consult Expert" },
