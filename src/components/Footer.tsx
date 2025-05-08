@@ -35,9 +35,9 @@ const Footer: React.FC = () => {
           <div className="flex items-center space-x-4 mb-4">
             <LanguageSwitcher />
           </div>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <SocialLink icon={<Twitter className="h-5 w-5" />} href="#" />
-          </div>
+          </div> */}
         </div>
         
         <div>
@@ -74,6 +74,12 @@ const Footer: React.FC = () => {
             <li className="flex items-start">
               <MapPin className="h-5 w-5 text-pink-500 mr-3 mt-1" />
               <span className="text-gray-600">上海市浦东新区张江高科技园区</span>
+            </li>
+            <li>
+              <FooterLink to="/how-to-use">{t('howToUse.title')}</FooterLink>
+            </li>
+            <li>
+              <FooterLink to="/faq">{t('faq.title')}</FooterLink>
             </li>
           </ul>
         </div>

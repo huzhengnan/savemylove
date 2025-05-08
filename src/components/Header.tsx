@@ -53,6 +53,8 @@ const Header: React.FC = () => {
             <NavLink onAnchor={() => handleAnchorNav('tools')}>{t('tools')}</NavLink>
             <NavLink onAnchor={() => handleAnchorNav('areas')}>{t('areas')}</NavLink>
             <NavLink to="/ai-chat" isRouter>{t('aiChat')}</NavLink>
+            <NavLink to="/how-to-use" isRouter>{t('howToUse.title')}</NavLink>
+            <NavLink to="/faq" isRouter>{t('faq.title')}</NavLink>
             <LanguageSwitcher />
             <NavLink onAnchor={() => handleAnchorNav('contact')} isButton>{t('startConsultation')}</NavLink>
           </nav>
@@ -77,6 +79,8 @@ const Header: React.FC = () => {
             <MobileNavLink onAnchor={() => handleAnchorNav('tools')}>{t('tools')}</MobileNavLink>
             <MobileNavLink onAnchor={() => handleAnchorNav('areas')}>{t('areas')}</MobileNavLink>
             <MobileNavLink to="/ai-chat" isRouter>{t('aiChat')}</MobileNavLink>
+            <MobileNavLink to="/how-to-use" isRouter>{t('howToUse.title')}</MobileNavLink>
+            <MobileNavLink to="/faq" isRouter>{t('faq.title')}</MobileNavLink>
             <MobileNavLink onAnchor={() => handleAnchorNav('contact')} isHighlighted>{t('startConsultation')}</MobileNavLink>
           </div>
         </div>

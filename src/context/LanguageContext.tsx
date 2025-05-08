@@ -2,6 +2,10 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 type Language = 'zh' | 'en';
 
+interface TranslationValue {
+  [key: string]: Record<Language, string> | TranslationValue;
+}
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
@@ -12,7 +16,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 // Translation dictionary
-const translations: Record<string, Record<Language, string>> = {
+const translations: TranslationValue = {
   // Header
   "tools": { zh: "爱情测算", en: "Love Calculator" },
   "areas": { zh: "情感咨询", en: "Consultation" },
@@ -640,6 +644,139 @@ const translations: Record<string, Record<Language, string>> = {
     zh: "与我们的 AI 情感助手对话，获得专业的情感建议和支持。", 
     en: "Chat with our AI emotional assistant to get professional emotional advice and support." 
   },
+  "faq": {
+    "title": { 
+      zh: "常见问题", 
+      en: "Frequently Asked Questions" 
+    },
+    "subtitle": { 
+      zh: "找到您需要的答案", 
+      en: "Find the answers you need" 
+    },
+    "description": { 
+      zh: "SaveMyLove 常见问题解答，帮助您更好地了解我们的服务", 
+      en: "SaveMyLove FAQ, helping you better understand our services" 
+    },
+    "question1": { 
+      zh: "SaveMyLove 是什么服务？", 
+      en: "What is SaveMyLove?" 
+    },
+    "answer1": { 
+      zh: "SaveMyLove 是一个结合 AI 技术和专业情感咨询的平台，提供爱情测算、情感分析和专业咨询服务。", 
+      en: "SaveMyLove is a platform that combines AI technology with professional emotional consultation, offering love calculation, emotional analysis, and professional consulting services." 
+    },
+    "question2": { 
+      zh: "如何使用 SaveMyLove 的服务？", 
+      en: "How do I use SaveMyLove's services?" 
+    },
+    "answer2": { 
+      zh: "您可以通过网站或微信小程序访问我们的服务。注册账号后，即可使用爱情测算、AI 对话等功能。", 
+      en: "You can access our services through our website or WeChat Mini Program. After registering an account, you can use features like love calculation and AI chat." 
+    },
+    "question3": { 
+      zh: "AI 情感对话是如何工作的？", 
+      en: "How does AI emotional chat work?" 
+    },
+    "answer3": { 
+      zh: "我们的 AI 系统经过专业训练，能够理解情感问题并提供适当的建议。它结合了心理学知识和情感咨询经验。", 
+      en: "Our AI system is professionally trained to understand emotional issues and provide appropriate advice. It combines psychological knowledge and emotional consultation experience." 
+    },
+    "question4": { 
+      zh: "如何保证我的隐私安全？", 
+      en: "How is my privacy protected?" 
+    },
+    "answer4": { 
+      zh: "我们采用严格的隐私保护措施，所有用户数据都经过加密处理，并严格遵守相关法律法规。", 
+      en: "We implement strict privacy protection measures. All user data is encrypted and we strictly comply with relevant laws and regulations." 
+    },
+    "question5": { 
+      zh: "如何联系客服？", 
+      en: "How can I contact customer service?" 
+    },
+    "answer5": { 
+      zh: "您可以通过邮件、在线客服或微信客服号联系我们，我们会在24小时内回复您的问题。", 
+      en: "You can contact us via email, online customer service, or WeChat customer service. We will respond to your questions within 24 hours." 
+    },
+    "contactText": { 
+      zh: "没有找到您需要的答案？", 
+      en: "Couldn't find the answer you're looking for?" 
+    },
+    "contactButton": { 
+      zh: "联系我们", 
+      en: "Contact Us" 
+    }
+  },
+  "nav": {
+    "home": { zh: "首页", en: "Home" },
+    "loveCalculator": { zh: "爱情测算", en: "Love Calculator" },
+    "nameMatch": { zh: "姓名配对", en: "Name Match" },
+    "aiChat": { zh: "AI 对话", en: "AI Chat" },
+    "faq": { zh: "常见问题", en: "FAQ" },
+    "login": { zh: "登录", en: "Login" },
+    "register": { zh: "注册", en: "Register" }
+  },
+  "howToUse": {
+    "title": { 
+      zh: "如何使用", 
+      en: "How to Use" 
+    },
+    "subtitle": { 
+      zh: "简单几步，开启你的爱情之旅", 
+      en: "A few simple steps to start your love journey" 
+    },
+    "description": { 
+      zh: "了解如何使用 SaveMyLove 的各项功能，获取专业的爱情分析和建议", 
+      en: "Learn how to use SaveMyLove's features to get professional love analysis and advice" 
+    },
+    "step1": {
+      "title": { 
+        zh: "注册账号", 
+        en: "Create an Account" 
+      },
+      "description": { 
+        zh: "使用邮箱或手机号注册账号，开始你的爱情测算之旅", 
+        en: "Register with your email or phone number to start your love calculation journey" 
+      }
+    },
+    "step2": {
+      "title": { 
+        zh: "选择服务", 
+        en: "Choose a Service" 
+      },
+      "description": { 
+        zh: "根据你的需求，选择爱情测算、姓名配对或情感咨询等服务", 
+        en: "Choose from love calculation, name compatibility, or emotional consultation based on your needs" 
+      }
+    },
+    "step3": {
+      "title": { 
+        zh: "输入信息", 
+        en: "Enter Information" 
+      },
+      "description": { 
+        zh: "按照提示输入相关信息，我们的系统将进行专业分析", 
+        en: "Enter relevant information as prompted, and our system will perform professional analysis" 
+      }
+    },
+    "step4": {
+      "title": { 
+        zh: "获取结果", 
+        en: "Get Results" 
+      },
+      "description": { 
+        zh: "查看详细的分析报告，获取专业的建议和指导", 
+        en: "View detailed analysis reports and get professional advice and guidance" 
+      }
+    },
+    "readyToStart": { 
+      zh: "准备好开始了吗？", 
+      en: "Ready to get started?" 
+    },
+    "startButton": { 
+      zh: "开始测算", 
+      en: "Start Calculation" 
+    }
+  },
 };
 
 export const LanguageProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
@@ -665,11 +802,18 @@ export const LanguageProvider: React.FC<{children: React.ReactNode}> = ({ childr
 
   // Translation function
   const t = (key: string) => {
-    if (!translations[key]) {
-      console.warn(`Translation missing for key: ${key}`);
-      return key;
+    const keys = key.split('.');
+    let value: any = translations;
+    
+    for (const k of keys) {
+      if (!value[k]) {
+        console.warn(`Translation missing for key: ${key}`);
+        return key;
+      }
+      value = value[k];
     }
-    return translations[key][language];
+    
+    return value[language];
   };
 
   const value = {

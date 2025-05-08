@@ -22,6 +22,8 @@ import EmotionalHealing from './pages/EmotionalHealing';
 import AIChatPage from './pages/AIChatPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import FAQ from './pages/FAQ';
+import HowToUse from './pages/HowToUse';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // 包装组件以使用hooks
@@ -103,6 +105,8 @@ const AppContent: React.FC = () => {
             <Route path="/ai-chat" element={<AIChatPage />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/how-to-use" element={<HowToUse />} />
           </Routes>
           </main>
           <Footer />
